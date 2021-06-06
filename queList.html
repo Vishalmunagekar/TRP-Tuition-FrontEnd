@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h3>SAI-Classes</h3>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarScroll">
+
+                <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                    <li class="nav-item ml-3">
+                        <a class="nav-link font-weight-bold" href="./home.html">HOME</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="nav-link font-weight-bold" href="./examination.html">EXAMINATION</a>
+                    </li>
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle font-weight-bold" href=" #" id="navbarScrollingDropdown"
+                            role="button" data-toggle="dropdown" aria-expanded="false">
+                            SYLLABUS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">10th</a></li>
+                            <li><a class="dropdown-item" href="#">09th</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Others</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle font-weight-bold" href=" #" id="navbarScrollingDropdown"
+                            role="button" data-toggle="dropdown" aria-expanded="false">
+                            SECTIONS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="./exam_page.html">SECTIONS 01</a></li>
+                            <li><a class="dropdown-item" href="./paper.html">SECTIONS 02</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">SECTIONS 03</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="btn btn-primary" href="./login.html" role="button">LOGIN</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="btn btn-warning" href="./signup0.html" role="button">SIGNUP</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <div class="btn-group open">
+                            <a class="btn btn-primary" href="./profile.html"><i class="fa fa-user fa-fw"></i> User</a>
+                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="./userEdit.html"><i class="fa fa-pencil fa-fw"></i>&nbsp;Edit</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-ban fa-fw"></i>&nbsp;Ban</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-unlock"></i>&nbsp;Make admin</a></li>
+                            </ul>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+    <section>
+        <div class="container">
+            <h1 class="my-5 display-4" style="text-align: center;">Questions</h1>
+            <div class="row">
+                <div class="col">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">All Questions of ___ Test</span>
+                        <div>
+                            <a href="./addQue.html"><button class="btn btn-primary mr-3"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;New</button></a>
+                            <span class="badge badge-secondary badge-pill">3</span>
+                        </div>
+                    </h4>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                1. Question number one
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="offset-2"></div>
+                                <div class="col">
+                                    <ul>
+                                        <li>
+                                          A Option one Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolor facilis quasi quibusdam modi, assumenda quaerat quo eligendi aperiam
+                                        </li>
+                                        <li>
+                                          B Option two
+                                      </li>
+                                    </ul>
+                                  </ul>
+                                </div>
+                                <div class="col">
+                                    <ul>
+                                        <li>
+                                          C Option Three
+                                        </li>
+                                        <li>
+                                          D Option Four
+                                      </li>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                2. Question number two
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                  <div class="offset-2"></div>
+                                  <div class="col">
+                                      <ul>
+                                        <li>
+                                            A Option one Lorem ipsum dolor sit amet
+                                        </li>
+                                        <li>
+                                            B Option two
+                                        </li>
+                                      </ul>
+                                    </ul>
+                                  </div>
+                                  <div class="col">
+                                      <ul>
+                                        <li>
+                                            C Option Three Lorem ipsum dolor sit amet
+                                        </li>
+                                        <li>
+                                            D Option Four Aspernatur, optio laborum iure architecto consectetur, quo labore nemo dignissimos autem fugit nihil officiis nesciunt! Beatae, ea. Illo voluptatibus nobis magni explicabo.
+                                        </li>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                3. Question number three
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                              And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div style="height: 50rem;"></div>
+    </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/ac865e99e2.js"></script>
+
+</html>

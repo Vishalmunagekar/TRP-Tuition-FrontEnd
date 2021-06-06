@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+.myShadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.color-secondary{
+  background-color: #e28b3f;
+  border: #e28b3f;
+  color: #ffff;
+}
+
+.color-secondary:hover,
+.color-secondary:visited{
+  background-color: #e67e22;
+  border: #e67e22;
+  color: #ffff;
+}
+
+
+.queBox {
+  height: 3.25rem;
+  width: 3.25rem;
+  background-color: #ffff;
+  border: .2px solid #000000;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.queBox:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffff;
+}
+
+.p-center {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.hrozontal-question > div {
+  display: inline-block;
+}
+
+.hrozontal-question {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  .mobile-view {
+    display: none;
+  }
+}
+
+.loginImg{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./images/loginimg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100wh;
+}
+
+.card{
+  border: 0;
+}
+
+.zoom:hover {
+  font-size: 5.3rem;
+  transition: all .2s;
+}
+
+.list-group-item:hover {
+  background-color: #f3f3f3e5;
+}
+
+.test-header {
+  background-color: #f3f3f3e5;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.60);
+  z-index: 50;
+}
+
+.alert-box{
+  border-radius: 8px;
+  position: fixed;
+  top: 30vh;
+  left: 20vw;
+  width: 60vw;
+  padding: 16px;
+  z-index: 100;
+  background: white;
+}
+
+.gotopbtn{
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  text-decoration: none;
+}
