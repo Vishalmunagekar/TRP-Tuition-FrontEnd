@@ -6,6 +6,9 @@
 // Fallback Font
 @import "fonts/arial-font";
 
+// Fallback Font
+@import "fonts/lato-font";
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
@@ -13,7 +16,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'Open Sans', Arial  !important;
+  font-family: 'Open Sans', Arial, 'Lato', 'Lato Hairline'  !important;
   font-weight:normal;
   font-style:normal;
   size: 12px;
