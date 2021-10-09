@@ -103,3 +103,51 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+
+### angular CLI for Nx 
+- nx run erp-tuition-ng:build
+- nx build erp-tuition-ng
+- nx serve erp-tuition-ng
+- nx generate @nrwl/angular:component components/login-form --project=erp-tuition-ng
+- nx generate @nrwl/angular:service services/auth/auth  --project=erp-tuition-ng
+- nx generate @nrwl/angular:module services/auth/auth  --project=erp-tuition-ng
+- [ link here] (https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx/introduction/introduction)
+
+### generate library { --help to see more information}
+- nx generate @nrwl/angular:lib auth --routing
+- nx generate @nrwl/angular:component containers/login --project=auth
+- Use External Libraries
+```javascript
+ @NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    NxModule.forRoot(),
+    RouterModule.forRoot([{path: 'auth', children: authRoutes}], { initialNavigation: 'enabled' }),
+    AuthModule     // added
+  ],
+```
+
+# Cypress
+
+## Open test-ui
+` npx cypress open `
+
+## commands
+* ` npx cypress run `
+* ` npx cypress run --headless `
+
+## fixtures
+- contaion json data for run
+
+## integration
+- test Files    
+    - single discribe and mutiple tests 
+
+## plugins
+- extend functionality
+    - oauth code generation
+
+## support
+- reusable code
