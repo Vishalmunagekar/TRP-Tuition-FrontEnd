@@ -40,7 +40,9 @@ import {
     faClock,
     faHourglass,
     faGlobeAmericas,
-    faCircle
+    faCircle,
+    faLock,
+    faLockOpen
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeSolidIcons = {
@@ -83,5 +85,7 @@ export const fontAwesomeSolidIcons = {
     faClock,
     faHourglass,
     faGlobeAmericas,
-    faCircle
+    faCircle,
+    faLock,
+    faLockOpen
 };

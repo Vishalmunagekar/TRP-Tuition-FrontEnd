@@ -15,10 +15,13 @@
 
 html,
 body {
-  height: 100%;
   font-family: 'Open Sans', Arial, 'Lato', 'Lato Hairline'  !important;
   font-weight:normal;
   font-style:normal;
   size: 12px;
-  background-color: grayscale($color: #cccccc);
+  // background-color: grayscale($color: #cccccc);
+}
+
+.container-fluid {
+  padding-left: 0px;
 }

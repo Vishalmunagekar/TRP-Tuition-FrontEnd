@@ -1,0 +1,35 @@
+<div class="w-75 m-auto">
+  <div class="px-2">
+      <h1 class="display-4">Login</h1>
+  </div>
+  <form class="px-3">
+      <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <div class="input-group flex-nowrap">
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                  aria-describedby="addon-wrapping">
+              <div class="input-group-append">
+                  <span class="input-group-text" id="addon-wrapping"><fa-icon [icon]='["fas", "user"]' [size]="'1x'" [styles]="{'color': '#e28b3f'}"></fa-icon></span>
+              </div>
+          </div>
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+
+      <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <div class="input-group flex-nowrap">
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <div class="input-group-append">
+                  <span class="input-group-text" id="addon-wrapping"><fa-icon [icon]='["fas", "lock"]' [size]="'1x'" [styles]="{'color': '#e28b3f'}"></fa-icon></span>
+              </div>
+          </div>
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary form-control"><fa-icon [icon]='["fas", "sign-in-alt"]' [size]="'1x'"></fa-icon>&nbsp;Login</button>
+      </div>
+      <div class="form-group">
+          <a type="button" routerLink="/signup" class="btn form-control color-secondary"><fa-icon [icon]='["fas", "sign-in-alt"]' [size]="'1x'"></fa-icon>&nbsp;Signup</a>
+      </div>
+  </form>
+</div>
