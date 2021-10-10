@@ -14,48 +14,50 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="loginImg"></div>
-        </div>
-        <div class="col-md-4 align-self-center">
-            <div class="w-75 m-auto">
-                <div class="p-3">
-                    <h1 class="display-4">Login</h1>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="loginImg"></div>
+            </div>
+            <div class="col-md-4 align-self-center">
+                <div class="w-75 m-auto">
+                    <div class="px-2">
+                        <h1 class="display-4">Login</h1>
+                    </div>
+                    <form class="px-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                    aria-describedby="addon-wrapping">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user" style="color: #e28b3f;" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <div class="input-group flex-nowrap">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="addon-wrapping"><i class="fa fa-unlock-alt" style="color: #e28b3f;" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary form-control"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</button>
+                        </div>
+                        <div class="form-group">
+                            <a type="button" href="./signup0.html" class="btn form-control color-secondary"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Signup</a>
+                        </div>
+                    </form>
                 </div>
-                <form class="p-3">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="addon-wrapping">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user" style="color: #e28b3f;" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <div class="input-group flex-nowrap">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-unlock-alt" style="color: #e28b3f;" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary form-control"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</button>
-                    </div>
-                    <div class="form-group">
-                        <a type="button" href="./signup0.html" class="btn form-control color-secondary"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Signup</a>
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

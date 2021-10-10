@@ -4,6 +4,17 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
+
+.container-fluid {
+  padding-left: 0px;
+}
+
+.container {
+  /* padding-left: 0px; */
+  padding-right: 0px;
+}
+
+
 .myShadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
