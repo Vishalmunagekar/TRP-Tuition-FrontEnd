@@ -20,6 +20,7 @@ import {
     faTachometerAlt,
     faThumbsUp,
     faUser,
+    faUserPlus,
     faInfoCircle,
     faAngleDoubleLeft,
     faAngleDoubleRight,
@@ -40,7 +41,9 @@ import {
     faClock,
     faHourglass,
     faGlobeAmericas,
-    faCircle
+    faCircle,
+    faLock,
+    faLockOpen
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeSolidIcons = {
@@ -59,6 +62,7 @@ export const fontAwesomeSolidIcons = {
     faTable,
     faTachometerAlt,
     faUser,
+    faUserPlus,
     faSignInAlt,
     faSignOutAlt,
     faAngleDoubleDown,
@@ -83,5 +87,7 @@ export const fontAwesomeSolidIcons = {
     faClock,
     faHourglass,
     faGlobeAmericas,
-    faCircle
+    faCircle,
+    faLock,
+    faLockOpen
 };

@@ -1,0 +1,32 @@
+<div class="w-75 m-auto">
+  <div class="p-2">
+      <h1 class="display-4">Login</h1>
+  </div>
+  <form class="px-3">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="Username">
+      <span class="input-group-text" id="Username">
+        <fa-icon [icon]='["fas", "user"]' [size]="'1x'" [styles]="{'color': '#e28b3f'}"></fa-icon>
+      </span>
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="Password">
+      <span class="input-group-text" id="Password">
+        <fa-icon [icon]='["fas", "lock"]' [size]="'1x'" [styles]="{'color': '#e28b3f'}"></fa-icon>
+      </span>
+    </div>
+
+    <div class="d-grid input-group mb-3">
+      <button type="button" class="btn btn-primary" routerLink="/auth/login">
+        <fa-icon [icon]='["fas", "sign-in-alt"]' [size]="'1x'"></fa-icon>&nbsp;Login
+      </button>
+    </div>
+
+    <div class="d-grid input-group mb-3">
+      <button type="button" class="btn btn-warning" routerLink="/auth/signup">
+        <fa-icon [icon]='["fas", "user-plus"]' [size]="'1x'"></fa-icon>&nbsp;Signup
+      </button>
+    </div>
+  </form>
+</div>
