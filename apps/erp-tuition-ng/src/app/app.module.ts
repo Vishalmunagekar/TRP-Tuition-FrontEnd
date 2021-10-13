@@ -8,11 +8,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconModule } from './modules/icon/icon.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent ],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule, AppRoutingModule, IconModule, HttpClientModule, RouterModule, AuthModule],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    FontAwesomeModule,
+    AppRoutingModule,
+    IconModule,
+    HttpClientModule,
+    RouterModule,
+    AuthModule,
+    DashboardModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
