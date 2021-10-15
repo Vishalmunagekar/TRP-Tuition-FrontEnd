@@ -9,10 +9,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconModule } from './modules/icon/icon.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { NavigationModule } from './modules/navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     NgbModule,
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     RouterModule,
     AuthModule,
-    DashboardModule
+    DashboardModule,
+    NavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent],

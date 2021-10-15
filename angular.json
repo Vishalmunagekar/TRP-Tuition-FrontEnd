@@ -22,7 +22,10 @@
               "apps/erp-tuition-ng/src/assets"
             ],
             "styles": ["apps/erp-tuition-ng/src/styles/styles.scss"],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
