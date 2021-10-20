@@ -6,6 +6,7 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
+    "trp": "nx serve erp-tuition-ng",
     "build": "nx build",
     "test": "nx test"
   },

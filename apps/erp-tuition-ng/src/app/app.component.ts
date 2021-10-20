@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Admin } from '@erp-tuition-frontend/data-types'
 @Component({
   selector: 'erp-tuition-frontend-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'erp-tuition-ng';
+  user:Admin|any;
 }

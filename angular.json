@@ -1,6 +1,28 @@
 {
   "version": 1,
   "projects": {
+    "data-types": {
+      "root": "libs/data-types",
+      "sourceRoot": "libs/data-types/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/data-types/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-types"],
+          "options": {
+            "jestConfig": "libs/data-types/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "erp-tuition-ng": {
       "projectType": "application",
       "root": "apps/erp-tuition-ng",
