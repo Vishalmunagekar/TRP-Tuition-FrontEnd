@@ -43,7 +43,12 @@ import {
     faGlobeAmericas,
     faCircle,
     faLock,
-    faLockOpen
+    faLockOpen,
+    faUnlockAlt,
+    faBan,
+    faTrashAlt,
+    faTrash,
+    faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeSolidIcons = {
@@ -89,5 +94,10 @@ export const fontAwesomeSolidIcons = {
     faGlobeAmericas,
     faCircle,
     faLock,
-    faLockOpen
+    faLockOpen,
+    faUnlockAlt,
+    faBan,
+    faTrashAlt,
+    faTrash,
+    faPencilAlt
 };
