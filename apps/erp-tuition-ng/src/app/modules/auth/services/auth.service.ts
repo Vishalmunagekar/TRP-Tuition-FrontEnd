@@ -13,13 +13,7 @@ export class AuthService {
 
   login(credentials:{username: string, password:string}){
     //console.log(credentials);
-    this.httpClient.get<User[]>("https://jsonplaceholder.typicode.com/users").subscribe((user:User[]) => {
-      //console.log(user);
-      const index:number = user.findIndex(u => u.username === credentials.username);
-      if(index !== -1){
-        this.isLoggedIn.next(true);
-      }
-    });
+    return this.httpClient.get<User[]>("https://jsonplaceholder.typicode.com/users");
   }
 
   signUp(credentials:{username: string, password:string}){
