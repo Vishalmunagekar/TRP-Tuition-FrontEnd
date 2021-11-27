@@ -22,12 +22,14 @@ body {
   // background-color: grayscale($color: #cccccc);
 }
 
+.my-success {
+  background-color :$teal-300;
+}
 
 erp-tuition-frontend-toast {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 13px;
-  transition: opacity 5s;
 }
 
 .container-fluid {

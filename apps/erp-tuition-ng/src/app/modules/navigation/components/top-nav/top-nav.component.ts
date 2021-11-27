@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../auth/services/auth.service';
+import { Router } from '@angular/router';
+import { ToastService } from '../../../common/toast/toast.service';
 
 @Component({
   selector: 'erp-tuition-frontend-top-nav',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn = false;
+  constructor(private authService: AuthService,
+              private router: Router,
+              private toastService: ToastService) { }
 
   ngOnInit(): void {
+    console.warn('TopNavComponent...');
+    this.authService.isLoggedIn.subscribe((value:boolean)=> {
+      this.isLoggedIn = value;
+    })
+  }
+
+
+  public get getIsLoggedIn():boolean {
+    return this.isLoggedIn;
+  }
+
+  logout() {
+    this.authService.isLoggedIn.next(false);
+    this.router.navigate(['auth']);
+    this.toastService.showInfo('logged out successfully...!')
   }
 
 }

@@ -48,7 +48,8 @@ import {
     faBan,
     faTrashAlt,
     faTrash,
-    faPencilAlt
+    faPencilAlt,
+    faTimesCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeSolidIcons = {
@@ -99,5 +100,6 @@ export const fontAwesomeSolidIcons = {
     faBan,
     faTrashAlt,
     faTrash,
-    faPencilAlt
+    faPencilAlt,
+    faTimesCircle
 };

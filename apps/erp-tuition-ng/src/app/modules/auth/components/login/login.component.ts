@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
   }
 
   showToast(message:string){
-    this.toastService.show(message, { classname: 'bg-success text-light text-center', delay: 5000 });
+    this.toastService.showSuccess(message);
   }
 
   getAllUsers(){
