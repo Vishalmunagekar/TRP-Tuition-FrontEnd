@@ -2,22 +2,33 @@
   <div class="p-2">
       <h1 class="display-4">Login</h1>
   </div>
-  <form class="px-3" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+  <form class="px-3" [formGroup]="loginForm" (ngSubmit)="login()">
     <div class="input-group mb-3">
-      <input type="text" ngModel name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="Username" required>
-      <span class="input-group-text" id="Username">
+      <input type="text" formControlName="username" [class.is-invalid]="getFormControls.username?.errors?.required && getFormControls.username?.touched" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="Username">
+      <span class="input-group-text" id="username">
         <fa-icon [icon]='["fas", "user"]' [size]="'1x'" [styles]="{'color': '#e28b3f'}"></fa-icon>
       </span>
-      <div class="invalid-feedback">
-        Please provide a valid city.
+      <div class="invalid-feedback" >
+        Username must be required
       </div>
     </div>
 
     <div class="input-group mb-3">
-      <input type="password" ngModel name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="Password" required>
+      <input type="password" formControlName="password" [class.is-invalid]="getFormControls.password?.errors?.required && getFormControls.password?.touched" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="Password">
       <span class="input-group-text" id="Password">
         <fa-icon [icon]='["fas", "lock"]' [size]="'1x'" [styles]="{'color': '#e28b3f'}"></fa-icon>
       </span>
+      <div class="invalid-feedback">
+        Passowrd must be required
+      </div>
+      <small class="text-danger" *ngIf="getFormControls.password?.errors?.pattern">
+<pre>Password must be containt -
+  At least one upper case
+  At least one lower case
+  At least one digit
+  At least one special character (?=.*?[#?!@$%^&*-])
+  Minimum eight in length</pre>
+      </small>
     </div>
 
     <div class="d-grid input-group mb-3">

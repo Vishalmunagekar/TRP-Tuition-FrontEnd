@@ -5,7 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { IconModule } from '../icon/icon.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
 
@@ -13,7 +13,7 @@ import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent, SignupComponent],
-  imports: [ CommonModule, RouterModule, IconModule, FormsModule, HttpClientModule ],
+  imports: [ CommonModule, RouterModule, IconModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
   providers: [ AuthGuard ],
   exports: [AuthComponent, LoginComponent, SignupComponent ]
 })

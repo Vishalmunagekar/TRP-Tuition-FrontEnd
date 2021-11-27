@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'erp-tuition-frontend-login',
@@ -10,7 +10,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   isLoggedIn = false;
-  constructor(private authService: AuthService, private router: Router) { }
+  loginForm:FormGroup;
+  constructor(private authService: AuthService, private router: Router) {
+    this.loginForm = new FormGroup({
+      username: new FormControl('',[Validators.required, Validators.pattern("^[a-zA-Z]+$")]),
+      password: new FormControl('',[Validators.required, Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")])
+    });
+   }
 
   ngOnInit(): void {
     console.log("LoginComponent works...")
@@ -22,12 +28,18 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  login(loginForm: NgForm){
-    this.authService.login(loginForm.value);
+  login(){
+    if(this.loginForm.valid){
+    this.authService.login(this.loginForm.value);
+    }
   }
 
   getAllUsers(){
     this.authService.getAllUsers();
+  }
+
+  get getFormControls() {
+    return this.loginForm.controls;
   }
 
 }
