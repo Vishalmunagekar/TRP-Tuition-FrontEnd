@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
       <ul class="navbar-nav">
         <ng-container *ngIf="getIsLoggedIn">
-          <li class="nav-item px-2"><a class="nav-link active" aria-current="page"  routerLink="/dashboard">Home</a></li>
+          <li class="nav-item px-2"><a class="nav-link" aria-current="page"  routerLink="/dashboard">HOME</a></li>
         </ng-container>
         <ng-container *ngIf="getIsLoggedIn">
           <li class="nav-item px-2"><a class="nav-link" aria-current="page" routerLink="/dashboard">EXAMINATION</a></li>
@@ -62,7 +62,7 @@
         </ng-container>
 
         <ng-container *ngIf="getIsLoggedIn">
-          <li class="nav-item px-2"><a class="btn btn-primary" (click)="logout()" role="button">LOGOUT</a></li>
+          <li class="nav-item px-2"><a class="btn btn-outline-warning" (click)="logout()" role="button">LOGOUT</a></li>
         </ng-container>
 
       </ul>
