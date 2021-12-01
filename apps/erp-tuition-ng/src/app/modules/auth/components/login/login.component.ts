@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastService } from '../../../common/toast/toast.service';
+import { AppSessionStorageService } from '../../services/app-session-storage.service';
 import { User } from '../../models/User';
 
 @Component({
@@ -13,7 +14,10 @@ import { User } from '../../models/User';
 export class LoginComponent implements OnInit {
   isLoggedIn = false;
   loginForm:FormGroup;
-  constructor(private authService: AuthService, private router: Router,public toastService: ToastService) {
+  constructor(private authService: AuthService,
+              private router: Router,
+              private toastService: ToastService,
+              private sessionStorageService : AppSessionStorageService) {
     this.loginForm = new FormGroup({
       username: new FormControl('',[Validators.required, Validators.pattern("^[a-zA-Z]+$")]),
       password: new FormControl('',[Validators.required, Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")])
@@ -37,7 +41,8 @@ export class LoginComponent implements OnInit {
         const index:number = user.findIndex(u => u.username === this.loginForm.value.username);
         if(index !== -1){
           this.authService.isLoggedIn.next(true);
-          this.showToast('User successfully logged in');
+          this.sessionStorageService.store("user", user[index]);
+          this.showToast("User " + user[index].username + " successfully logged in");
         }
       });
     }
