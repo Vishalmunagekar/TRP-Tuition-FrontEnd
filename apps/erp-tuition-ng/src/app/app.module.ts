@@ -5,27 +5,23 @@ import { RouterModule } from '@angular/router';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 
 import { AppComponent } from './app.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { IconModule } from './modules/icon/icon.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { NavigationModule } from './modules/navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
-import { AppCommonModule } from './modules/common/app-common.module';
+import { SharedModule } from '@erp-tuition-frontend/shared';
 
 @NgModule({
   declarations: [AppComponent ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
     AppRoutingModule,
-    IconModule,
     HttpClientModule,
     RouterModule,
+    SharedModule,
     AuthModule,
     DashboardModule,
     NavigationModule,
-    AppCommonModule,
     NgxWebstorageModule.forRoot(),
   ],
   providers: [],

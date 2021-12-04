@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.sessionStorageService.retrieve("user");
-    console.log(this.user);
+    //console.log(this.user);
   }
 
 }

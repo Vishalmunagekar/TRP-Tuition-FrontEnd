@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { ToastService } from './toast.service';
 
 @Component({
   selector: 'erp-tuition-frontend-toast',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToastComponent implements OnInit {
 
-  constructor() { }
+  isTemplate(toast: { textOrTpl: any; }) { return toast.textOrTpl instanceof TemplateRef; }
+
+  constructor(public toastService: ToastService) {}
 
   ngOnInit(): void {
+    console.log("ToastComponent...")
   }
+
 
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ToastService } from '../../../common/toast/toast.service';
+import { ToastService } from '@erp-tuition-frontend/shared';
 import { AppSessionStorageService } from '@erp-tuition-frontend/shared';
 import { User } from '../../models/User';
 

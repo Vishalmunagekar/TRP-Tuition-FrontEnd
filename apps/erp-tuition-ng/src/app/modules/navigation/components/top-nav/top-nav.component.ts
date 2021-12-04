@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../auth/services/auth.service';
 import { Router } from '@angular/router';
-import { ToastService } from '../../../common/toast/toast.service';
+import { ToastService, AppSessionStorageService } from '@erp-tuition-frontend/shared';
 
 @Component({
   selector: 'erp-tuition-frontend-top-nav',
@@ -13,7 +13,8 @@ export class TopNavComponent implements OnInit {
   isLoggedIn = false;
   constructor(private authService: AuthService,
               private router: Router,
-              private toastService: ToastService) { }
+              private toastService: ToastService,
+              private sessionStorageService : AppSessionStorageService) { }
 
   ngOnInit(): void {
     console.warn('TopNavComponent...');
@@ -28,9 +29,10 @@ export class TopNavComponent implements OnInit {
   }
 
   logout() {
+    this.sessionStorageService.clear();
     this.authService.isLoggedIn.next(false);
     this.router.navigate(['auth']);
-    this.toastService.showInfo('logged out successfully...!')
+    this.toastService.showInfo('logged out successfully...!');
   }
 
 }

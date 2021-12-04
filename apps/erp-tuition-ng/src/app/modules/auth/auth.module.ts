@@ -8,13 +8,14 @@ import { IconModule } from '../icon/icon.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
+import { SharedModule } from '@erp-tuition-frontend/shared';
 
 
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent, SignupComponent],
-  imports: [ CommonModule, RouterModule, IconModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
+  imports: [ CommonModule, RouterModule, IconModule, FormsModule, HttpClientModule, ReactiveFormsModule, SharedModule ],
   providers: [ AuthGuard ],
-  exports: [AuthComponent, LoginComponent, SignupComponent ]
+  exports: [AuthComponent, LoginComponent, SignupComponent, SharedModule ]
 })
 export class AuthModule { }
