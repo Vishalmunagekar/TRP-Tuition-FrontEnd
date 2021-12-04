@@ -10,6 +10,7 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { NavigationModule } from './modules/navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from '@erp-tuition-frontend/shared';
+import { ProfileModule } from './modules/profile/profile.module';
 
 @NgModule({
   declarations: [AppComponent ],
@@ -23,6 +24,7 @@ import { SharedModule } from '@erp-tuition-frontend/shared';
     DashboardModule,
     NavigationModule,
     NgxWebstorageModule.forRoot(),
+    ProfileModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

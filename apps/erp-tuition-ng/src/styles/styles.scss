@@ -38,3 +38,8 @@ erp-tuition-frontend-toast {
 .container-fluid {
   padding-left: 0px;
 }
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}

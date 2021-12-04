@@ -14,6 +14,6 @@ import { SharedModule } from '@erp-tuition-frontend/shared';
 @NgModule({
   declarations: [TopNavComponent, FooterComponent, TopNavContainerComponent, FooterContainerComponent ],
   imports: [CommonModule, RouterModule, SharedModule],
-  exports: [TopNavContainerComponent, TopNavComponent, FooterComponent]
+  exports: [TopNavComponent, FooterComponent, TopNavContainerComponent, FooterContainerComponent]
 })
 export class NavigationModule { }
