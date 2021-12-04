@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppSessionStorageService } from '../../auth/services/app-session-storage.service';
+import { AppSessionStorageService } from '@erp-tuition-frontend/shared';
 import { User } from '../../auth/models/User';
 
 @Component({

@@ -3,7 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastService } from '../../../common/toast/toast.service';
-import { AppSessionStorageService } from '../../services/app-session-storage.service';
+import { AppSessionStorageService } from '@erp-tuition-frontend/shared';
 import { User } from '../../models/User';
 
 @Component({
