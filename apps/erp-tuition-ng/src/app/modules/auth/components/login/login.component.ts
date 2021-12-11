@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastService } from '@erp-tuition-frontend/shared';
 import { AppSessionStorageService } from '@erp-tuition-frontend/shared';
-import { User } from '../../models/User';
+import { AuthenticationRequest } from '../../models/AuthenticationRequest';
+import { AuthenticationResponse } from '../../models/AuthenticationResponse';
 
 @Component({
   selector: 'erp-tuition-frontend-login',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
               private sessionStorageService : AppSessionStorageService) {
     this.loginForm = new FormGroup({
       username: new FormControl('',[Validators.required, Validators.pattern("^[a-zA-Z]+$")]),
-      password: new FormControl('',[Validators.required, Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")])
+      password: new FormControl('',[Validators.required ]) //Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
     });
    }
 
@@ -37,13 +38,19 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.loginForm.valid){
-      this.authService.login(this.loginForm.value).subscribe((user:User[]) => {
-        const index:number = user.findIndex(u => u.username === this.loginForm.value.username);
-        if(index !== -1){
-          this.authService.isLoggedIn.next(true);
-          this.sessionStorageService.store("user", user[index]);
-          this.showToast("User " + user[index].username + " successfully logged in");
-        }
+
+      const credentials : AuthenticationRequest = {
+        username : this.loginForm.value.username,
+        password:this.loginForm.value.password
+      };
+
+      this.authService.login(credentials, "student").subscribe(( response:AuthenticationResponse) => {
+        console.log(response.username)
+          if(response != null ){
+              this.authService.isLoggedIn.next(true);
+              this.sessionStorageService.store("AuthenticationResponse", response);
+              this.showToast("User " + response.username + " successfully logged in");
+          }
       });
     }
   }

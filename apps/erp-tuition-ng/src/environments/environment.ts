@@ -1,9 +1,14 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+const HOST = "192.168.1.105";
+const PORT = "9090";
+const BASE_URL = "http://" + HOST + ":" + PORT;
 
 export const environment = {
   production: false,
+  LOGIN_URL:  BASE_URL + "/erp/auth/login?userType=",
+  REFRESH_TOKEN_URL: BASE_URL + "/erp/auth/refresh/token"
 };
 
 /*

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from './services/auth.service';
 import { AppSessionStorageService } from '@erp-tuition-frontend/shared';
 import { User } from './models/User';
+import { AuthenticationResponse } from './models/AuthenticationResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,8 @@ export class AuthGuard implements CanActivate {
       this.isLoggedIn = value;
       if (this.isLoggedIn == false) {
         console.log("if block called in Authguard")
-        const user:User =  this.sessionStorageService.retrieve("user");
-        if (user != null || user != undefined) {
+        const response:AuthenticationResponse =  this.sessionStorageService.retrieve("AuthenticationResponse");
+        if (response != null || response != undefined) {
           this.authService.isLoggedIn.next(true);
         }
       }

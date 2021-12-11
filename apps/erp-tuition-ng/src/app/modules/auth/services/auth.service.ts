@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { User } from './../models/User';
+import { environment } from './../../../../environments/environment';
+import { AuthenticationRequest } from './../models/AuthenticationRequest';
+import { AuthenticationResponse } from './../models/AuthenticationResponse';
+import { RefreshTokenRequest } from './../models/RefreshTokenRequest';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +15,15 @@ export class AuthService {
   isLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   constructor(private httpClient : HttpClient) { }
 
-  login(credentials:{username: string, password:string}){
-    //console.log(credentials);
-    return this.httpClient.get<User[]>("https://jsonplaceholder.typicode.com/users");
+  login(credentials : AuthenticationRequest, userType: string){ //student, staff, parent
+    return this.httpClient.post<AuthenticationResponse>(environment.LOGIN_URL + userType, credentials);
   }
 
-  signUp(credentials:{username: string, password:string}){
+  refreshToken(refreshTokenReq:RefreshTokenRequest){
+    return this.httpClient.post<AuthenticationResponse>(environment.REFRESH_TOKEN_URL, refreshTokenReq);
+  }
+
+  signUp(credentials:{username: string, password:string}){ //student, staff, parent
     return this.httpClient.post("url", credentials);
   }
 

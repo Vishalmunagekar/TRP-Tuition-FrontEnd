@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppSessionStorageService } from '@erp-tuition-frontend/shared';
 import { User } from '../../auth/models/User';
+import { AuthenticationResponse } from '../../auth/models/AuthenticationResponse';
 
 @Component({
   selector: 'erp-tuition-frontend-dashboard',
@@ -9,11 +10,11 @@ import { User } from '../../auth/models/User';
 })
 export class DashboardComponent implements OnInit {
 
-  user!:User;
+  response!:AuthenticationResponse;
   constructor( private sessionStorageService : AppSessionStorageService) { }
 
   ngOnInit(): void {
-    this.user = this.sessionStorageService.retrieve("user");
+    this.response = this.sessionStorageService.retrieve("AuthenticationResponse");
     //console.log(this.user);
   }
 
